@@ -1,17 +1,12 @@
-apiVersion: networking.k8s.io/v1
+apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: ingress-service
-  annotations:
-    kubernetes.io/ingress.class: nginx
 spec:
   rules:
     - http:
         paths:
           - path: /
-            pathType: Prefix
             backend:
-              service:
-                name: football-cluster-ip-service
-                port:
-                  number: 8080
+              serviceName: football-cluster-ip-service
+              servicePort: 8080
