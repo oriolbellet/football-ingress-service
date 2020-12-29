@@ -13,7 +13,7 @@ spec:
             backend:
               serviceName: football-cluster-ip-service
               servicePort: 8080
-          - path: /rabbitmq/
+          - path: /rabbitmq
             backend:
               serviceName: rabbitmq-cluster-ip-service
               servicePort: 15672
